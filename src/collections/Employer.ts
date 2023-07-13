@@ -5,10 +5,7 @@ const Employer: CollectionConfig = {
   slug: "employers",
   auth:{
     tokenExpiration:60*60*24*30,
-    cookies:{
-      sameSite:"none",
-      secure:true,
-    }
+
   },
   admin: {
     useAsTitle: "name",
@@ -17,8 +14,8 @@ const Employer: CollectionConfig = {
   access: {
     read: () => true,
     create: () => true,
-    update: isEmployerOrAdmin,
-    delete: isEmployerOrAdmin,
+    update: ()=>true,
+    delete: ()=>true,
   },
   fields: [
     // Email added by default

@@ -1,5 +1,4 @@
 import { CollectionConfig } from "payload/types";
-import { isApplicantOrAdmin } from "../accessControl/applicant/isApplicantOrAdmin";
 
 const Applicant: CollectionConfig = {
   slug: "applicants",
@@ -19,8 +18,8 @@ const Applicant: CollectionConfig = {
   access: {
     read: () => true,
     create: () => true,
-    update: isApplicantOrAdmin,
-    delete: isApplicantOrAdmin,
+    update: ()=>true,
+    delete: ()=>true,
   },
   fields: [
     // Email added by default

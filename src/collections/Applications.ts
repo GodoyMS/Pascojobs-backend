@@ -12,7 +12,8 @@ const Applications: CollectionConfig = {
     // read: isEmployeeSelfOrAdminApplications,
     read:()=>true,
     create:()=>true,
-    delete:()=>true
+    delete:()=>true,
+    update:()=>true
 
 
   },

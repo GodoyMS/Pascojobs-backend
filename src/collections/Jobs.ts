@@ -10,7 +10,7 @@ const Jobs: CollectionConfig = {
   access: {
     read: () => true,
     update: ()=>true,
-    delete: isEmployerSelfOrAdminJobs,
+    delete: ()=>true,
     create: ()=>true,
   },
   fields: [

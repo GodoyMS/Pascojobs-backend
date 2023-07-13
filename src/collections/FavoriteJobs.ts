@@ -1,6 +1,5 @@
 import { CollectionConfig } from "payload/types";
-import { isApplicantSelfOrAdmin } from "../accessControl/applicant/isApplicantSelfOrAdmin";
-import { isApplicantSelfOrAdminFavJobs } from "../accessControl/favoriteJobs/isApplicantSelfOrAdminFavJobs";
+
 const FavoriteJobs: CollectionConfig = {
   slug: "favoriteJobs",
   admin: {
@@ -8,9 +7,9 @@ const FavoriteJobs: CollectionConfig = {
     useAsTitle: "job",
   },
   access: {
-    read: isApplicantSelfOrAdminFavJobs,
-    create:isApplicantSelfOrAdmin,
-    delete:isApplicantSelfOrAdminFavJobs,
+    read: ()=>true,
+    create:()=>true,
+    delete:()=>true,
     update:()=>false
   },
   fields: [
