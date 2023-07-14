@@ -7,7 +7,9 @@ const CvUploads: CollectionConfig = {
 
   access: {
     read: () => true,
-    create: () => true,
+    create:()=>true,
+    delete:()=>true,
+    update:()=>true,
   },
   fields: [
  
@@ -16,7 +18,7 @@ const CvUploads: CollectionConfig = {
     {
       path: "/upload",
       method: "post",
-      handler: async (req, res, next) => {
+      handler: async (req, res) => {
         const { base64, name } = req.body;
         const { data, url } = await UploadDocumentToBucket(base64, name);
 

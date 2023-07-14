@@ -9,6 +9,9 @@ const Categories: CollectionConfig = {
   },
   access: {
     read: () => true,
+    update:()=>true,
+    create:()=>true,
+    delete:()=>true
 
   },
   fields: [

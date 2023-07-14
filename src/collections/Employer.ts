@@ -3,9 +3,8 @@ import { isEmployerOrAdmin } from "../accessControl/employer/isEmployerOrdAdmin"
 
 const Employer: CollectionConfig = {
   slug: "employers",
-  auth:{
-    tokenExpiration:60*60*24*30,
-
+  auth: {
+    tokenExpiration: 60 * 60 * 24 * 30,
   },
   admin: {
     useAsTitle: "name",
@@ -14,8 +13,8 @@ const Employer: CollectionConfig = {
   access: {
     read: () => true,
     create: () => true,
-    update: ()=>true,
-    delete: ()=>true,
+    update: () => true,
+    delete: () => true,
   },
   fields: [
     // Email added by default

@@ -9,6 +9,9 @@ const WorkExperience: CollectionConfig = {
   },
   access: {
     read: () => true,
+    create:()=>true,
+    delete:()=>true,
+    update:()=>true,
 
   },
   fields: [

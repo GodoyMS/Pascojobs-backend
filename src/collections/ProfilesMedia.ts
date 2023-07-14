@@ -25,8 +25,10 @@ const ProfilesMedia: CollectionConfig = {
   },
   fields: [],
   access:{
-    read:()=>true,
-    create:()=>true
+    read: () => true,
+    create:()=>true,
+    delete:()=>true,
+    update:()=>true,
   }
 };
 

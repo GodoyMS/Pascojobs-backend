@@ -6,7 +6,9 @@ const ProfilesUpload: CollectionConfig = {
 
   access: {
     read: () => true,
-    create: () => true,
+    create:()=>true,
+    delete:()=>true,
+    update:()=>true,
   },
   fields: [
  

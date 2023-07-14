@@ -5,10 +5,7 @@ const Applicant: CollectionConfig = {
   
   auth:{
     tokenExpiration:60*60*24*30,
-    cookies:{
-      sameSite:"none",
-      secure:true,
-    }
+
   },
   admin: {
     useAsTitle: "name",
