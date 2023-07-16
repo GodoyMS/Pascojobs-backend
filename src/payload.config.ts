@@ -16,6 +16,7 @@ import ProfilesUpload from "./collections/ProfilesUpload";
 import CvUploads from "./collections/CvUploads";
 import Applications from "./collections/Applications";
 import { config } from "./config/configEnvs";
+import Reports from "./collections/Reports";
 export default buildConfig({
   serverURL: config.BACKEND_URL,
   admin: {
@@ -37,9 +38,26 @@ export default buildConfig({
     FavoriteJobs,
     ProfilesUpload,
     CvUploads,
+    Reports
     // Add Collections here
     // Examples,
   ],
+  email: {
+    transportOptions: {
+      host: 'smtp.ethereal.email',
+      auth: {
+        user: 'maurine17@ethereal.email',
+        pass: '944UX1ERzx9deRsrfg'
+    },
+    secure:false,
+      port: 587,
+      tls: {
+        rejectUnauthorized: false
+      },
+    },
+    fromName: "Maurine Kihn",
+    fromAddress: "maurine17@ethereal.email",
+  },  
   csrf: [
     // whitelist of domains to allow cookie auth from
     "http://localhost:19006",

@@ -2,7 +2,12 @@ import { CollectionConfig } from "payload/types";
 
 const Admins: CollectionConfig = {
   slug: "admins",
-  auth: true,
+  auth: {
+    forgotPassword: {
+      generateEmailSubject: ({ req, user }) => {
+        return `Hey ${user.email}, reset your password!`;
+      }
+    }  },
   admin: {
     useAsTitle: "email",
   },

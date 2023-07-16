@@ -7,6 +7,7 @@ const Jobs: CollectionConfig = {
     defaultColumns: ["title", "author", "category", "salary", "status"],
     useAsTitle: "title",
   },
+ 
   access: {
     read: () => true,
     update: ()=>true,
