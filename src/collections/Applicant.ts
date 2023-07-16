@@ -1,6 +1,13 @@
-import { CollectionConfig } from "payload/types";
+import { CollectionConfig ,PayloadRequest} from "payload/types";
 import { forgotPasswordTemplate } from "../services/email/templates/forgot-password/forgot-password-template";
+import { User } from "payload/dist/auth";
 
+
+interface GenerateEmailHTMLParams {
+  req: PayloadRequest; // Replace 'any' with the appropriate type for the 'req' object
+  token: string;
+  user: User; // Assuming 'User' is the type of your user object and has an 'email' property
+}
 const Applicant: CollectionConfig = {
   slug: "applicants",
   
@@ -10,7 +17,7 @@ const Applicant: CollectionConfig = {
         return `Hey ${user.email}, restablece tu contraseña`;
       },
 
-      generateEmailHTML: ({ req, token, user }) => {
+      generateEmailHTML: ({ req, token, user }:GenerateEmailHTMLParams) => {
         const resetPasswordURL = `https://pascojobsperu.com/restablecer-contraseña?token=${token}`;
 
         return forgotPasswordTemplate.passwordResetTemplate(
