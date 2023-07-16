@@ -15,19 +15,29 @@ import ApplicantCvMedia from "./collections/ApplicantCv";
 import ProfilesUpload from "./collections/ProfilesUpload";
 import CvUploads from "./collections/CvUploads";
 import Applications from "./collections/Applications";
-import { config } from "./config/configEnvs";
+import { config } from './config/configEnvs';
 import Reports from "./collections/Reports";
+
+
 export default buildConfig({
   serverURL: config.BACKEND_URL,
   admin: {
     user: Admins.slug,
-  },
+    webpack:(config)=>{
+        config.resolve.fallback={
+          "fs": false,
+        "os": false,
+        "path": false,
+
+        }
+      return config
+  }
+},
   collections: [
     Applicant,
     Admins,
     Jobs,
     Applications,
-
     Employer,
     Categories,
     ProfilesMedia,
@@ -44,10 +54,10 @@ export default buildConfig({
   ],
   email: {
     transportOptions: {
-      host: 'smtp.ethereal.email',
+      host: 'smtp.sendgrid.net',
       auth: {
-        user: 'maurine17@ethereal.email',
-        pass: '944UX1ERzx9deRsrfg'
+        user: 'apikey',
+        pass: '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'
     },
     secure:false,
       port: 587,
@@ -55,8 +65,8 @@ export default buildConfig({
         rejectUnauthorized: false
       },
     },
-    fromName: "Maurine Kihn",
-    fromAddress: "maurine17@ethereal.email",
+    fromName: "Pasco Jobs",
+    fromAddress: "pascojobsperu@gmail.com",
   },  
   csrf: [
     // whitelist of domains to allow cookie auth from

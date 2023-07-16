@@ -1,15 +1,27 @@
 import { CollectionConfig } from "payload/types";
+import { forgotPasswordTemplate } from "../services/email/templates/forgot-password/forgot-password-template";
 
 const Applicant: CollectionConfig = {
   slug: "applicants",
   
-  auth:{
-    tokenExpiration:60*60*24*30,
+  auth: {
+    forgotPassword: {
+      generateEmailSubject: ({ req, user }) => {
+        return `Hey ${user.email}, restablece tu contraseña`;
+      },
 
+      generateEmailHTML: ({ req, token, user }) => {
+        const resetPasswordURL = `https://pascojobsperu.com/restablecer-contraseña?token=${token}`;
+
+        return forgotPasswordTemplate.passwordResetTemplate(
+          user?.email,
+          resetPasswordURL
+        );
+      },
+    },
   },
   admin: {
-    useAsTitle: "name",
-    
+    useAsTitle: "name",    
   },
   
   access: {
