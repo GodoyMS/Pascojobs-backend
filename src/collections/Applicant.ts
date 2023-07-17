@@ -18,7 +18,7 @@ const Applicant: CollectionConfig = {
       },
 
       generateEmailHTML: ({ req, token, user }:GenerateEmailHTMLParams) => {
-        const resetPasswordURL = `https://pascojobsperu.com/restablecer-contraseña?token=${token}`;
+        const resetPasswordURL = `https://pasco-jobs-web-frontend-nnvdn.ondigitalocean.app/usuarios/restablecer-contraseña?token=${token}`;
 
         return forgotPasswordTemplate.passwordResetTemplate(
           user?.email,
@@ -87,7 +87,14 @@ const Applicant: CollectionConfig = {
       name: "cv",
       type: "text"   
     },
-
+    {
+      name:"phone",
+      type:"text"
+    },
+    {
+      name:"whatsapp",
+      type:"text"
+    },
     {
       name: "applicantRole",
       // Save this field to JWT so we can use from `req.user`

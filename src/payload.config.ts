@@ -4,19 +4,20 @@ import path from "path";
 import Admins from "./collections/Admins";
 import Jobs from "./collections/Jobs";
 import Applicant from "./collections/Applicant";
-import ProfilesMedia from "./collections/ProfilesMedia";
 import Employer from "./collections/Employer";
 import Categories from "./collections/Categories";
 import WorkShifts from "./collections/WorkShifts";
 import WorkExperience from "./collections/WorkExperience";
 import Contracts from "./collections/Contracts";
 import FavoriteJobs from "./collections/FavoriteJobs";
-import ApplicantCvMedia from "./collections/ApplicantCv";
 import ProfilesUpload from "./collections/ProfilesUpload";
 import CvUploads from "./collections/CvUploads";
 import Applications from "./collections/Applications";
 import { config } from './config/configEnvs';
 import Reports from "./collections/Reports";
+import JobReports from "./collections/JobReports";
+import CompanyComments from "./collections/CompanyComments";
+import CompanyRecommendations from "./collections/CompanyRecommendations";
 
 
 export default buildConfig({
@@ -24,14 +25,15 @@ export default buildConfig({
   admin: {
     user: Admins.slug,
     webpack:(config)=>{
-        config.resolve.fallback={
-          "fs": false,
+      config.resolve.fallback={
+        "fs": false,
         "os": false,
-        "path": false,
+       "path": false,
 
-        }
-      return config
-  }
+      }
+    return config
+}
+ 
 },
   collections: [
     Applicant,
@@ -40,15 +42,16 @@ export default buildConfig({
     Applications,
     Employer,
     Categories,
-    ProfilesMedia,
-    ApplicantCvMedia,
     Contracts,
     WorkShifts,
     WorkExperience,
     FavoriteJobs,
     ProfilesUpload,
     CvUploads,
-    Reports
+    Reports,
+    JobReports,
+    CompanyComments,
+    CompanyRecommendations
     // Add Collections here
     // Examples,
   ],

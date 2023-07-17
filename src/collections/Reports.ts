@@ -6,6 +6,12 @@ const Reports: CollectionConfig = {
   admin: {
     useAsTitle: 'email',
   },
+  access: {
+    read: () => true,
+    create:()=>true,
+    delete:()=>true,
+    update:()=>true,
+  },
   fields: [
     {
       name: 'email',

@@ -1,10 +1,29 @@
-import { CollectionConfig } from "payload/types";
+import { CollectionConfig,PayloadRequest } from "payload/types";
 import { isEmployerOrAdmin } from "../accessControl/employer/isEmployerOrdAdmin";
-
+import { forgotPasswordTemplate } from "../services/email/templates/forgot-password/forgot-password-template";
+import { User } from "payload/dist/auth";
+interface GenerateEmailHTMLParams {
+  req: PayloadRequest; // Replace 'any' with the appropriate type for the 'req' object
+  token: string;
+  user: User; // Assuming 'User' is the type of your user object and has an 'email' property
+}
 const Employer: CollectionConfig = {
   slug: "employers",
   auth: {
-    tokenExpiration: 60 * 60 * 24 * 30,
+    forgotPassword: {
+      generateEmailSubject: ({ req, user }) => {
+        return `Hey ${user.email}, restablece tu contraseña`;
+      },
+
+      generateEmailHTML: ({ req, token, user }:GenerateEmailHTMLParams) => {
+        const resetPasswordURL = `https://pascojobsperu.com/empresas/restablecer-contraseña?token=${token}`;
+
+        return forgotPasswordTemplate.passwordResetTemplate(
+          user?.email,
+          resetPasswordURL
+        );
+      },
+    },
   },
   admin: {
     useAsTitle: "name",
@@ -40,6 +59,14 @@ const Employer: CollectionConfig = {
       name: "district",
       type: "text",
       required: false,
+    },
+    {
+      name:"phone",
+      type:"text"
+    },
+    {
+      name:"whatsapp",
+      type:"text"
     },
     {
       name: "profile",
