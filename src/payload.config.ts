@@ -24,15 +24,15 @@ export default buildConfig({
   serverURL: config.BACKEND_URL,
   admin: {
     user: Admins.slug,
-    webpack:(config)=>{
-      config.resolve.fallback={
-        "fs": false,
-        "os": false,
-       "path": false,
+//     webpack:(config)=>{
+//       config.resolve.fallback={
+//         "fs": false,
+//         "os": false,
+//        "path": false,
 
-      }
-    return config
-}
+//       }
+//     return config
+// }
  
 },
   collections: [
