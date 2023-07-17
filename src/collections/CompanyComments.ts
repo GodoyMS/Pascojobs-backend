@@ -25,6 +25,10 @@ const CompanyComments: CollectionConfig = {
       relationTo: "applicants",
     },
     {
+      name:"text",
+      type:"text",
+    },
+    {
       name:"stars",
       type:"number"
     }

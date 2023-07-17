@@ -69,6 +69,10 @@ const Employer: CollectionConfig = {
       type:"text"
     },
     {
+      name:"website",
+      type:"text"
+    },
+    {
       name: "profile",
       type: "text",
     },
