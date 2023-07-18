@@ -46,6 +46,10 @@ const Employer: CollectionConfig = {
       type: "text",
     },
     {
+      name:"descriptionhtml",
+      type:"text"
+    },
+    {
       name: "region",
       type: "text",
       required: false,
@@ -59,6 +63,10 @@ const Employer: CollectionConfig = {
       name: "district",
       type: "text",
       required: false,
+    },
+    {
+      name:"address",
+      type:"text"
     },
     {
       name:"phone",
@@ -77,6 +85,21 @@ const Employer: CollectionConfig = {
       type: "text",
     },
     { name: "verified", type: "text", defaultValue: "no" },
+    {
+      name:"featured",
+      type:"text",
+      defaultValue:"no"
+    },
+    {
+      name:"banned",
+      type:"text",
+      defaultValue:"no"
+    },
+    {
+      name:"public",
+      type:"text",
+      defaultValue:"yes"
+    },   
     {
       name: "employerRole",
       // Save this field to JWT so we can use from `req.user`
