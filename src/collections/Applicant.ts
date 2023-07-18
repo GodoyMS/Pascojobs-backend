@@ -96,6 +96,15 @@ const Applicant: CollectionConfig = {
       type:"text"
     },
     {
+      name:"public",
+      type:"text",
+      defaultValue:"yes"
+    },
+    {
+      name:"contactEmail",
+      type:"text"
+    },
+    {
       name: "applicantRole",
       // Save this field to JWT so we can use from `req.user`
       saveToJWT: true,
