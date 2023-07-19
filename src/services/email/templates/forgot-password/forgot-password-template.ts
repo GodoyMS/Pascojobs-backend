@@ -39,10 +39,13 @@ class ForgotPasswordTemplate{
           .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
             text-decoration: none;
-            border-radius: 3px;
+            border-radius: 10px;
+            border-color: #007bff;
+            border-width:solid;
+            border-style: solid;
+
+            color:#007bff
           }
           .button:hover {
             background-color: #0056b3;

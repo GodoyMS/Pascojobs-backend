@@ -16,7 +16,7 @@ const Employer: CollectionConfig = {
       },
 
       generateEmailHTML: ({ req, token, user }:GenerateEmailHTMLParams) => {
-        const resetPasswordURL = `https://pascojobsperu.com/empresas/restablecer-contraseña?token=${token}`;
+        const resetPasswordURL = `https://pascojobsperu.com/empresas/restablecer-password?token=${token}`;
 
         return forgotPasswordTemplate.passwordResetTemplate(
           user?.email,

@@ -18,7 +18,7 @@ const Applicant: CollectionConfig = {
       },
 
       generateEmailHTML: ({ req, token, user }:GenerateEmailHTMLParams) => {
-        const resetPasswordURL = `https://pasco-jobs-web-frontend-nnvdn.ondigitalocean.app/usuarios/restablecer-contraseña?token=${token}`;
+        const resetPasswordURL = `https://pascojobsperu.com/usuarios/restablecer-password?token=${token}`;
 
         return forgotPasswordTemplate.passwordResetTemplate(
           user?.email,

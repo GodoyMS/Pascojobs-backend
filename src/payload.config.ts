@@ -55,22 +55,39 @@ export default buildConfig({
     // Add Collections here
     // Examples,
   ],
+
   email: {
     transportOptions: {
-      host: 'smtp.sendgrid.net',
+      host: 'smtp-relay.brevo.com',
       auth: {
-        user: 'apikey',
-        pass: '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'
+        user: 'pascojobsperu@gmail.com',
+        pass: 'SyJcUfrXA97dVhCD'
     },
     secure:false,
       port: 587,
       tls: {
-        rejectUnauthorized: false
+        rejectUnauthorized: false 
       },
     },
     fromName: "Pasco Jobs",
     fromAddress: "pascojobsperu@gmail.com",
-  },  
+  },
+  // email: {
+  //   transportOptions: {
+  //     host: 'smtp.sendgrid.net',
+  //     auth: {
+  //       user: 'apikey',
+  //       pass: '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'
+  //   },
+  //   secure:false,
+  //     port: 587,
+  //     tls: {
+  //       rejectUnauthorized: false 
+  //     },
+  //   },
+  //   fromName: "Pasco Jobs",
+  //   fromAddress: "pascojobsperu@gmail.com",
+  // },  
   csrf: [
     // whitelist of domains to allow cookie auth from
     "http://localhost:19006",
