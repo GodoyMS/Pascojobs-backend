@@ -18,6 +18,9 @@ import Reports from "./collections/Reports";
 import JobReports from "./collections/JobReports";
 import CompanyComments from "./collections/CompanyComments";
 import CompanyRecommendations from "./collections/CompanyRecommendations";
+import AdsReports from "./collections/AdsReports";
+import UserAds from "./collections/UserAds";
+import Ads from "./collections/Ads";
 
 
 export default buildConfig({
@@ -51,7 +54,11 @@ export default buildConfig({
     Reports,
     JobReports,
     CompanyComments,
-    CompanyRecommendations
+    CompanyRecommendations,
+    AdsReports,
+    UserAds,
+    Ads
+    
     // Add Collections here
     // Examples,
   ],
