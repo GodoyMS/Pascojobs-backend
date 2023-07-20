@@ -23,8 +23,12 @@ const Ads: CollectionConfig = {
       name: "author",
       type: "relationship",
       relationTo: "userAds",
+      hasMany:false
     },
-   
+    {
+        name:"image",
+        type:"text"
+    },   
     { name: "description", type: "textarea", required: true}, 
  
     {
