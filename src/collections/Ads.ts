@@ -44,6 +44,12 @@ const Ads: CollectionConfig = {
       type:"text"
     },
     {
+    name:"featured",
+    type:"select",
+    options:["si","no"],
+    defaultValue:"no"
+    },
+    {
       name:"expired",
       type:"text",
       defaultValue:"no"

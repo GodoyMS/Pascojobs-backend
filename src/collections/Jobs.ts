@@ -161,6 +161,12 @@ const Jobs: CollectionConfig = {
      
     },
     {
+      name:"featured",
+      type:"select",
+      options:["si","no"],
+      defaultValue:"no"
+      },
+    {
       name:"district",
       type:"text"
     },
