@@ -24,21 +24,29 @@ import Ads from "./collections/Ads";
 import PostsImagesUpload from "./collections/PostsImagesUpload";
 
 
-export default buildConfig({
-  serverURL: config.BACKEND_URL,
-  admin: {
-    user: Admins.slug,
-//     webpack:(config)=>{
-//       config.resolve.fallback={
-//         "fs": false,
-//         "os": false,
-//        "path": false,
+  export default buildConfig({
+    serverURL: config.BACKEND_URL,
+    admin: {
+      user: Admins.slug,
+      // webpack:(config)=> {
+      //   config.externals = {
+      //     "sharp": 'commonjs sharp',
+      //   };
 
-//       }
-//     return config
-// }
- 
-},
+        
+      //   return config
+      // },
+  //      webpack:(config)=>{
+  //      config.resolve.fallback={
+  //          "fs": false,
+  //          "os": false,
+  //         "path": false,
+
+  //        }
+  //      return config
+  //  }
+  
+  },
   collections: [
     Applicant,
     Admins,
