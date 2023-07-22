@@ -21,6 +21,7 @@ import CompanyRecommendations from "./collections/CompanyRecommendations";
 import AdsReports from "./collections/AdsReports";
 import UserAds from "./collections/UserAds";
 import Ads from "./collections/Ads";
+import PostsImagesUpload from "./collections/PostsImagesUpload";
 
 
 export default buildConfig({
@@ -50,6 +51,7 @@ export default buildConfig({
     WorkExperience,
     FavoriteJobs,
     ProfilesUpload,
+    PostsImagesUpload,
     CvUploads,
     Reports,
     JobReports,
