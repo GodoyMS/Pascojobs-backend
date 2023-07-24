@@ -1,4 +1,4 @@
-import { CollectionConfig,PayloadRequest } from "payload/types";
+import { CollectionConfig, PayloadRequest } from "payload/types";
 import { isEmployerOrAdmin } from "../accessControl/employer/isEmployerOrdAdmin";
 import { forgotPasswordTemplate } from "../services/email/templates/forgot-password/forgot-password-template";
 import { User } from "payload/dist/auth";
@@ -15,7 +15,7 @@ const Employer: CollectionConfig = {
         return `Hey ${user.email}, restablece tu contraseña`;
       },
 
-      generateEmailHTML: ({ req, token, user }:GenerateEmailHTMLParams) => {
+      generateEmailHTML: ({ req, token, user }: GenerateEmailHTMLParams) => {
         const resetPasswordURL = `https://pascojobsperu.com/empresas/restablecer-password?token=${token}`;
 
         return forgotPasswordTemplate.passwordResetTemplate(
@@ -37,7 +37,7 @@ const Employer: CollectionConfig = {
   },
   fields: [
     // Email added by default
-    
+
     {
       name: "name",
       type: "text",
@@ -46,9 +46,10 @@ const Employer: CollectionConfig = {
       name: "description",
       type: "text",
     },
+    { name: "heading", type: "text" },
     {
-      name:"descriptionhtml",
-      type:"text"
+      name: "descriptionhtml",
+      type: "text",
     },
     {
       name: "region",
@@ -66,24 +67,24 @@ const Employer: CollectionConfig = {
       required: false,
     },
     {
-      name:"address",
-      type:"text"
+      name: "address",
+      type: "text",
     },
     {
-      name:"phone",
-      type:"text"
+      name: "phone",
+      type: "text",
     },
     {
-      name:"whatsapp",
-      type:"text"
+      name: "whatsapp",
+      type: "text",
     },
     {
-      name:"website",
-      type:"text"
+      name: "website",
+      type: "text",
     },
     {
-      name:"contactEmail",
-      type:"text"
+      name: "contactEmail",
+      type: "text",
     },
     {
       name: "profile",
@@ -91,24 +92,24 @@ const Employer: CollectionConfig = {
     },
     { name: "verified", type: "text", defaultValue: "no" },
     {
-      name:"featured",
-      type:"text",
-      defaultValue:"no"
+      name: "featured",
+      type: "text",
+      defaultValue: "no",
     },
     {
-      name:"orderDateRef",
-      type:"date",
+      name: "orderDateRef",
+      type: "date",
     },
     {
-      name:"banned",
-      type:"text",
-      defaultValue:"no"
+      name: "banned",
+      type: "text",
+      defaultValue: "no",
     },
     {
-      name:"public",
-      type:"text",
-      defaultValue:"yes"
-    },   
+      name: "public",
+      type: "text",
+      defaultValue: "yes",
+    },
     {
       name: "employerRole",
       // Save this field to JWT so we can use from `req.user`
