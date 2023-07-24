@@ -37,6 +37,7 @@ const Employer: CollectionConfig = {
   },
   fields: [
     // Email added by default
+    
     {
       name: "name",
       type: "text",
@@ -93,6 +94,10 @@ const Employer: CollectionConfig = {
       name:"featured",
       type:"text",
       defaultValue:"no"
+    },
+    {
+      name:"orderDateRef",
+      type:"date",
     },
     {
       name:"banned",
