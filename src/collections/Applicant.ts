@@ -96,6 +96,12 @@ const Applicant: CollectionConfig = {
       type:"text"
     },
     {
+      name:"showCv",
+      type:"text",
+      defaultValue:"yes"
+    },
+    {
+
       name:"public",
       type:"text",
       defaultValue:"yes"
