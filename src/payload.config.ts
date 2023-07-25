@@ -18,10 +18,10 @@ import Reports from "./collections/Reports";
 import JobReports from "./collections/JobReports";
 import CompanyComments from "./collections/CompanyComments";
 import CompanyRecommendations from "./collections/CompanyRecommendations";
-import AdsReports from "./collections/AdsReports";
 import UserAds from "./collections/UserAds";
 import Ads from "./collections/Ads";
 import PostsImagesUpload from "./collections/PostsImagesUpload";
+import AdsReportsByUser from "./collections/AdsReportsByUser";
 
 
   export default buildConfig({
@@ -65,7 +65,7 @@ import PostsImagesUpload from "./collections/PostsImagesUpload";
     JobReports,
     CompanyComments,
     CompanyRecommendations,
-    AdsReports,
+    AdsReportsByUser,
     UserAds,
     Ads
     

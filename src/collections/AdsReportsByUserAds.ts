@@ -1,9 +1,9 @@
 import { CollectionConfig } from "payload/types";
 
-const AdsReports: CollectionConfig = {
-  slug: "adsReports",
+const AdsReportsByUserAds: CollectionConfig = {
+  slug: "adsReportsByUserAds",
   admin: {
-    useAsTitle: "job",
+    useAsTitle: "ad",
   },
  
   access: {
@@ -21,7 +21,7 @@ const AdsReports: CollectionConfig = {
     {
       name: "user",
       type: "relationship",
-      relationTo: "applicants",
+      relationTo: "userAds",
     },
     {
       name:"reason",
@@ -30,4 +30,4 @@ const AdsReports: CollectionConfig = {
   ],
 };
 
-export default AdsReports;
+export default AdsReportsByUserAds;

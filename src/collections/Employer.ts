@@ -101,6 +101,11 @@ const Employer: CollectionConfig = {
       type: "date",
     },
     {
+      name:"availableCredits",
+      type: "number",
+      defaultValue:0
+    },
+    {
       name: "banned",
       type: "text",
       defaultValue: "no",

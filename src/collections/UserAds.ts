@@ -91,6 +91,11 @@ const UserAds: CollectionConfig = {
       defaultValue:"no"
     },
     {
+      name:"availableCredits",
+      type: "number",
+      defaultValue:0
+    },
+    {
       name:"banned",
       type:"text",
       defaultValue:"no"
