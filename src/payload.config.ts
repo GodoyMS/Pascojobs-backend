@@ -22,6 +22,7 @@ import UserAds from "./collections/UserAds";
 import Ads from "./collections/Ads";
 import PostsImagesUpload from "./collections/PostsImagesUpload";
 import AdsReportsByUser from "./collections/AdsReportsByUser";
+import AdsReportsByUserAds from "./collections/AdsReportsByUserAds";
 
 
   export default buildConfig({
@@ -66,6 +67,7 @@ import AdsReportsByUser from "./collections/AdsReportsByUser";
     CompanyComments,
     CompanyRecommendations,
     AdsReportsByUser,
+    AdsReportsByUserAds,
     UserAds,
     Ads
     
