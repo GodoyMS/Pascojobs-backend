@@ -122,10 +122,10 @@ import AdsReportsByUserAds from "./collections/AdsReportsByUserAds";
     schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
     disable:false,
     disablePlaygroundInProduction:false
-  }
-  // express: {
-  //   json: {
-  //     limit: 5 * 1024 * 1024,
-  //   },
-  // },
+  },
+   express: {
+     json: {
+       limit: 5 * 1024 * 1024,
+     },
+  },
 });
