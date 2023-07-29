@@ -14,6 +14,7 @@ const CvUploads: CollectionConfig = {
   fields: [
  
   ],
+  
   endpoints: [
     {
       path: "/upload",
